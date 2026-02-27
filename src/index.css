@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-white font-sans antialiased overflow-x-hidden;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-wide;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 text-white font-bold uppercase tracking-wider rounded-none hover:shadow-[0_0_20px_rgba(239,68,68,0.5)] transition-all duration-300 transform hover:-translate-y-1;
+  }
+  
+  .btn-secondary {
+    @apply px-8 py-4 bg-transparent border border-white/20 text-white font-bold uppercase tracking-wider rounded-none hover:bg-white/10 hover:border-white/40 transition-all duration-300 backdrop-blur-sm;
+  }
+  
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-8 hover:border-red-500/30 transition-all duration-500;
+  }
+  
+  .section-padding {
+    @apply py-20 px-4 md:px-8 lg:px-16 max-w-7xl mx-auto;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-orange-500;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
